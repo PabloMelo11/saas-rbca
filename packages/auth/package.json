@@ -3,14 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
-  "types": "rsc/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@casl/ability": "^6.7.1"
+  },
   "devDependencies": {
-    "@saas/prettier": "workspace:*",
     "@saas/eslint-config": "workspace:*",
+    "@saas/prettier": "workspace:*",
     "@saas/tsconfig": "workspace:*"
   },
   "eslintConfig": {
-    "extends": ["@saas/eslint-config/library"]
+    "extends": [
+      "@saas/eslint-config/library"
+    ]
   },
   "prettier": "@saas/prettier"
 }
