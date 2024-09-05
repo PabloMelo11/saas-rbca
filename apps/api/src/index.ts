@@ -3,7 +3,6 @@ import { defineAbilityFor } from '@saas/auth'
 const ability = defineAbilityFor({
   role: 'MEMBER',
   id: 'user-id',
-  __typename: 'User',
 })
 
 console.log(ability.can('get', 'Billing'))

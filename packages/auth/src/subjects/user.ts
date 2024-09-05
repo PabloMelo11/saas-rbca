@@ -1,7 +1,5 @@
 import { z } from 'zod'
 
-import { userSchema } from '../models/user'
-
 export const userSubject = z.tuple([
   z.union([
     z.literal('menage'),
@@ -10,7 +8,7 @@ export const userSubject = z.tuple([
     z.literal('delete'),
   ]),
 
-  z.union([z.literal('User'), userSchema]),
+  z.literal('User'),
 ])
 
 export type UserSubject = z.infer<typeof userSubject>
