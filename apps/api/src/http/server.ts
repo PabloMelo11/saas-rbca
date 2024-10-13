@@ -18,6 +18,7 @@ import { createAccount } from './routes/auth/create-account'
 import { getProfile } from './routes/auth/get-profile'
 import { requestPasswordRecover } from './routes/auth/request-password-recover'
 import { resetPassword } from './routes/auth/reset-password'
+import { getOrganizationBilling } from './routes/billing/get-organization-billing'
 import { acceptInvite } from './routes/invites/accept-invite'
 import { createInvite } from './routes/invites/create-invite'
 import { getInvite } from './routes/invites/get-invite'
@@ -84,6 +85,7 @@ app.register(authenticateWithGithub)
 app.register(getProfile)
 app.register(requestPasswordRecover)
 app.register(resetPassword)
+
 app.register(createOrganization)
 app.register(getMembership)
 app.register(getOrganization)
@@ -91,14 +93,17 @@ app.register(getOrganizations)
 app.register(updateOrganization)
 app.register(shutdownOrganization)
 app.register(transferOrganization)
+
 app.register(createProject)
 app.register(deleteProject)
 app.register(getProject)
 app.register(getProjects)
 app.register(updateProject)
+
 app.register(getMembers)
 app.register(updateMember)
 app.register(removeMember)
+
 app.register(createInvite)
 app.register(getInvite)
 app.register(getInvites)
@@ -106,6 +111,8 @@ app.register(acceptInvite)
 app.register(rejectInvite)
 app.register(revokeInvite)
 app.register(getPendingInvites)
+
+app.register(getOrganizationBilling)
 
 app
   .listen({ port: env.SERVER_PORT })
